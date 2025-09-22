@@ -1,5 +1,12 @@
+const MODULE_ID = 'tokenmagic-automatic-wounds'
 const systemBasedHpKeys = (actor) => {
-  if (game.system.id === 'pf2e') {
+  if (game.settings.get(MODULE_ID, 'manual-override')) {
+    return {
+      hpValue: game.settings.get(MODULE_ID, 'manual-override-hp-value'),
+      hpMax: game.settings.get(MODULE_ID, 'manual-override-hp-max'),
+      zeroIsBad: game.settings.get(MODULE_ID, 'manual-override-zero-is-bad'),
+    }
+  } else if (game.system.id === 'pf2e') {
     return {
       hpValue: 'system.attributes.hp.value',
       hpMax: 'system.attributes.hp.max',

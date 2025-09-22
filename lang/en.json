@@ -8,6 +8,22 @@
       "token-images-are-circular": {
         "name": "Token images are circular",
         "hint": "Should the code spread wounds in a circle pattern? If you have square token images, toggle this off, so that wounds can appear everywhere on the token (in a square pattern) without always leaving empty corners. If you use top-down tokens you probably still want to keep this setting on."
+      },
+      "manual-override": {
+        "name": "Manual override",
+        "hint": "[Advanced] Select if you wish to manually define the attributes."
+      },
+      "manual-override-hp-value": {
+        "name": "HP Value",
+        "hint": "Source of the value to track."
+      },
+      "manual-override-hp-max": {
+        "name": "HP Max",
+        "hint": "Source of the maximum value to track."
+      },
+      "manual-override-zero-is-bad": {
+        "name": "Zero is bad",
+        "hint": "Check when zero is full health (ex. wounds based systems)."
       }
     },
     "dialog": {

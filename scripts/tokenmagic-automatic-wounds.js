@@ -33,6 +33,42 @@ export const registerAutomaticWoundEffectsSettings = () => {
     type: Boolean,
     default: true,
   })
+  game.settings.register(MODULE_ID, 'manual-override', {
+    name: localize('setting.manual-override.name'),
+    hint: localize('setting.manual-override.hint'),
+    scope: 'world',
+    requiresReload: true,
+    config: true,
+    type: Boolean,
+    default: false,
+  })
+  game.settings.register(MODULE_ID, 'manual-override-hp-value', {
+    name: localize('setting.manual-override-hp-value.name'),
+    hint: localize('setting.manual-override-hp-value.hint'),
+    scope: 'world',
+    requiresReload: true,
+    config: true,
+    type: String,
+    default: false,
+  })
+  game.settings.register(MODULE_ID, 'manual-override-hp-max', {
+    name: localize('setting.manual-override-hp-max.name'),
+    hint: localize('setting.manual-override-hp-max.hint'),
+    scope: 'world',
+    requiresReload: true,
+    config: true,
+    type: String,
+    default: false,
+  })
+  game.settings.register(MODULE_ID, 'manual-override-zero-is-bad', {
+    name: localize('setting.manual-override-zero-is-bad.name'),
+    hint: localize('setting.manual-override-zero-is-bad.hint'),
+    scope: 'world',
+    requiresReload: true,
+    config: true,
+    type: Boolean,
+    default: false,
+  })
 }
 
 export const hookAutomaticWoundEffects = () => {
